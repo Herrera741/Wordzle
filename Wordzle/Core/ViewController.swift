@@ -15,13 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .black
         addChildren()
         
     }
 
     private func addChildren() {
-        
+        // 
         addChild(keyboardVC)
         keyboardVC.didMove(toParent: self)
         keyboardVC.view.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             // keyboard constraints for leading/trailing/bottom
             keyboardVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             keyboardVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            keyboardVC.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            keyboardVC.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
         
     }

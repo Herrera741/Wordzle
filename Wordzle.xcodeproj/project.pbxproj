@@ -15,6 +15,7 @@
 		B4487793287486C800D1B020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4487791287486C800D1B020 /* LaunchScreen.storyboard */; };
 		B448779D2874976D00D1B020 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448779C2874976D00D1B020 /* KeyboardViewController.swift */; };
 		B448779F287497A700D1B020 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448779E287497A700D1B020 /* BoardViewController.swift */; };
+		B44877A12874A4B600D1B020 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44877A02874A4B600D1B020 /* KeyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B4487794287486C800D1B020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B448779C2874976D00D1B020 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		B448779E287497A700D1B020 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		B44877A02874A4B600D1B020 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				B448778A287486C600D1B020 /* ViewController.swift */,
 				B448779C2874976D00D1B020 /* KeyboardViewController.swift */,
 				B448779E287497A700D1B020 /* BoardViewController.swift */,
+				B44877A02874A4B600D1B020 /* KeyCell.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				B448778B287486C600D1B020 /* ViewController.swift in Sources */,
 				B4487787287486C600D1B020 /* AppDelegate.swift in Sources */,
 				B4487789287486C600D1B020 /* SceneDelegate.swift in Sources */,
+				B44877A12874A4B600D1B020 /* KeyCell.swift in Sources */,
 				B448779D2874976D00D1B020 /* KeyboardViewController.swift in Sources */,
 				B448779F287497A700D1B020 /* BoardViewController.swift in Sources */,
 			);

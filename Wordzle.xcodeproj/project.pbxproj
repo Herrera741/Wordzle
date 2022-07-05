@@ -13,6 +13,8 @@
 		B448778E287486C600D1B020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B448778C287486C600D1B020 /* Main.storyboard */; };
 		B4487790287486C800D1B020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B448778F287486C800D1B020 /* Assets.xcassets */; };
 		B4487793287486C800D1B020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4487791287486C800D1B020 /* LaunchScreen.storyboard */; };
+		B448779D2874976D00D1B020 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448779C2874976D00D1B020 /* KeyboardViewController.swift */; };
+		B448779F287497A700D1B020 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B448779E287497A700D1B020 /* BoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B448778F287486C800D1B020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4487792287486C800D1B020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4487794287486C800D1B020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B448779C2874976D00D1B020 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		B448779E287497A700D1B020 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		B4487785287486C600D1B020 /* Wordzle */ = {
 			isa = PBXGroup;
 			children = (
-				B4487786287486C600D1B020 /* AppDelegate.swift */,
-				B4487788287486C600D1B020 /* SceneDelegate.swift */,
-				B448778A287486C600D1B020 /* ViewController.swift */,
-				B448778C287486C600D1B020 /* Main.storyboard */,
-				B448778F287486C800D1B020 /* Assets.xcassets */,
-				B4487791287486C800D1B020 /* LaunchScreen.storyboard */,
+				B448779B2874872900D1B020 /* Core */,
+				B448779A2874871100D1B020 /* Other */,
 				B4487794287486C800D1B020 /* Info.plist */,
 			);
 			path = Wordzle;
+			sourceTree = "<group>";
+		};
+		B448779A2874871100D1B020 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B4487786287486C600D1B020 /* AppDelegate.swift */,
+				B4487788287486C600D1B020 /* SceneDelegate.swift */,
+				B448778C287486C600D1B020 /* Main.storyboard */,
+				B448778F287486C800D1B020 /* Assets.xcassets */,
+				B4487791287486C800D1B020 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B448779B2874872900D1B020 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B448778A287486C600D1B020 /* ViewController.swift */,
+				B448779C2874976D00D1B020 /* KeyboardViewController.swift */,
+				B448779E287497A700D1B020 /* BoardViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +163,8 @@
 				B448778B287486C600D1B020 /* ViewController.swift in Sources */,
 				B4487787287486C600D1B020 /* AppDelegate.swift in Sources */,
 				B4487789287486C600D1B020 /* SceneDelegate.swift in Sources */,
+				B448779D2874976D00D1B020 /* KeyboardViewController.swift in Sources */,
+				B448779F287497A700D1B020 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +328,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +356,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

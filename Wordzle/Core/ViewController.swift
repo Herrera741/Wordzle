@@ -9,7 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let answers: [String] = ["after", "money", "piece", "pizza", "found", "first", "error", "thumb", "sound"]
+    let answers: [String] = ["after",
+                             "money",
+                             "piece",
+                             "pizza",
+                             "found",
+                             "first",
+                             "error",
+                             "thumb",
+                             "sound",
+                             "apple"]
     var answer = ""
     private var guesses: [[Character?]] = Array(repeating: Array(repeating: nil, count: 5), count: 6)
     let keyboardVC = KeyboardViewController()

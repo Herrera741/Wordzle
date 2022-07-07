@@ -22,7 +22,7 @@ class KeyCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .darkGray
+        backgroundColor = .systemGray
         contentView.addSubview(label)
         // label constraints for leading/trailing/top/bottom
         NSLayoutConstraint.activate([

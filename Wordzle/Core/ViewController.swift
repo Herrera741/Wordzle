@@ -18,7 +18,9 @@ class ViewController: UIViewController {
                              "error",
                              "thumb",
                              "sound",
-                             "apple"]
+                             "apple",
+                             "fight"
+                            ]
     var answer = ""
     private var guesses: [[Character?]] = Array(repeating: Array(repeating: nil, count: 5), count: 6)
     let keyboardVC = KeyboardViewController()
@@ -108,7 +110,7 @@ extension ViewController: BoardViewControllerDataSource {
         
         // check if letter exists in board letter location
         guard let letter = guesses[indexPath.section][indexPath.row], indexedAnswer.contains(letter) else {
-            return nil
+            return .darkGray
         }
     
         if indexedAnswer[indexPath.row] == letter {

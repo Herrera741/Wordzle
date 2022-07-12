@@ -10,6 +10,7 @@ import UIKit
 class KeyCell: UICollectionViewCell {
     
     static let identifier = "KeyCell"
+    private var isActionKey = false
     
     let label: UILabel = {
         let label = UILabel()
@@ -44,7 +45,30 @@ class KeyCell: UICollectionViewCell {
     }
     
     func configure(with letter: Character) {
-        label.text = String(letter).uppercased()
+        
+        var foundActionKey: Character?
+        let actionKeys: [Character] = ["<", ">"]
+        var text: String
+        
+        for actionKey in actionKeys {
+            if actionKey == letter {
+                isActionKey = true
+                foundActionKey = actionKey
+            }
+        }
+        
+        if isActionKey {
+            guard let foundActionKey = foundActionKey else {
+                return
+            }
+            
+            text = (foundActionKey == "<") ? "Enter" : "Del"
+            
+        } else {
+            text = String(letter).uppercased()
+        }
+        
+        label.text = text
     }
     
     

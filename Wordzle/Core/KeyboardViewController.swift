@@ -16,7 +16,7 @@ protocol KeyboardViewControllerDelegate: AnyObject {
 class KeyboardViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     weak var delegate: KeyboardViewControllerDelegate?
-    let letters = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
+    let letters = ["qwertyuiop", "asdfghjkl", "<zxcvbnm>"]
     private var keys: [[Character]] = []
     
     let collectionView:UICollectionView = {
@@ -82,7 +82,7 @@ extension KeyboardViewController {
         var left: CGFloat = 1
         var right: CGFloat = 1
         let margin: CGFloat = 20
-        let cellSize: CGFloat = (collectionView.frame.size.width-margin) / 10
+        let cellSize: CGFloat = (collectionView.frame.size.width - margin) / 10
         let itemsCount: CGFloat = CGFloat(collectionView.numberOfItems(inSection: section))
         
         let inset: CGFloat = (collectionView.frame.size.width - (cellSize * itemsCount) - (2 * itemsCount)) / 2

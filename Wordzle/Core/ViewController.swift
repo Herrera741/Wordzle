@@ -19,9 +19,10 @@ class ViewController: UIViewController {
                              "thumb",
                              "sound",
                              "apple",
-                             "fight"
-                            ]
+                             "fight",
+                             "order"]
     var answer = ""
+    private var guessedCorrect = false
     private var guesses: [[Character?]] = Array(repeating: Array(repeating: nil, count: 5), count: 6)
     let keyboardVC = KeyboardViewController()
     let boardVC = BoardViewController()
@@ -30,8 +31,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         answer = answers.randomElement() ?? "later"
         view.backgroundColor = .black
-        addChildren()
         
+        addChildren()
     }
 
     private func addChildren() {
@@ -72,9 +73,9 @@ class ViewController: UIViewController {
 extension ViewController: KeyboardViewControllerDelegate {
     func keyboardViewController(_ vc: KeyboardViewController, didTapKey letter: Character) {
         
-        // update guesses
+        // update guess in board cell
         var stop: Bool = false
-        
+    
         for guessRow in 0..<guesses.count {
             for guessColumn in 0..<guesses[guessRow].count {
                 if guesses[guessRow][guessColumn] == nil {

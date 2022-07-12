@@ -75,13 +75,28 @@ extension ViewController: KeyboardViewControllerDelegate {
         
         // update guess in board cell
         var stop: Bool = false
-    
+        
         for guessRow in 0..<guesses.count {
             for guessColumn in 0..<guesses[guessRow].count {
                 if guesses[guessRow][guessColumn] == nil {
-                    guesses[guessRow][guessColumn] = letter
-                    stop = true
-                    break
+                    
+                    // check if action key and not a guessed letter
+                    if (letter == "<" || letter == ">") {
+                        if letter == "<" {
+                            // submit guess
+                            print("submit guess")
+                        } else {
+                            // delete last guessed letter
+                            if guessColumn > 0 {
+                                guesses[guessRow][guessColumn-1] = nil
+                            }
+                        }
+                    } else {
+                        // guess is a letter
+                        guesses[guessRow][guessColumn] = letter
+                        stop = true
+                        break
+                    }
                 }
             }
             

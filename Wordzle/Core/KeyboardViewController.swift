@@ -19,6 +19,7 @@ class KeyboardViewController: UIViewController, UICollectionViewDelegateFlowLayo
     let letters = ["qwertyuiop", "asdfghjkl", "<zxcvbnm>"]
     private var keys: [[Character]] = []
     
+    
     let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 2
@@ -70,7 +71,7 @@ extension KeyboardViewController {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin: CGFloat = 20
-        let cellSize: CGFloat = (collectionView.frame.size.width-margin) / 10
+        let cellSize: CGFloat = (collectionView.frame.size.width - margin) / 10
         
         return CGSize(width: cellSize, height: cellSize*1.5)
     }
@@ -99,7 +100,6 @@ extension KeyboardViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
         collectionView.deselectItem(at: indexPath, animated: true)
         let letter = keys[indexPath.section][indexPath.row]
         delegate?.keyboardViewController(self, didTapKey: letter)

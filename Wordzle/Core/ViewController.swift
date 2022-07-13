@@ -20,8 +20,19 @@ class ViewController: UIViewController {
                              "sound",
                              "apple",
                              "fight",
-                             "order"]
+                             "order",
+                             "final",
+                             "bison",
+                             "sugar",
+                             "diner",
+                             "crane",
+                             "ember",
+                             "house",
+                             "igloo",
+                             "rapid",
+                             "taste"]
     var answer = ""
+    private var currentGuessRow = 0
     private var guessedCorrect = false
     private var guesses: [[Character?]] = Array(repeating: Array(repeating: nil, count: 5), count: 6)
     let keyboardVC = KeyboardViewController()
@@ -76,34 +87,43 @@ extension ViewController: KeyboardViewControllerDelegate {
         // update guess in board cell
         var stop: Bool = false
         
-        for guessRow in 0..<guesses.count {
-            for guessColumn in 0..<guesses[guessRow].count {
-                if guesses[guessRow][guessColumn] == nil {
+        if currentGuessRow < guesses.count {
+            for guessColumn in 0..<guesses[currentGuessRow].count {
+                if guesses[currentGuessRow][guessColumn] == nil {
                     
                     // check if action key and not a guessed letter
                     if (letter == "<" || letter == ">") {
                         if letter == "<" {
                             // submit guess
                             print("submit guess")
+                            currentGuessRow += 1
+                            stop = true
+                            break
                         } else {
                             // delete last guessed letter
                             if guessColumn > 0 {
-                                guesses[guessRow][guessColumn-1] = nil
+                                guesses[currentGuessRow][guessColumn-1] = nil
                             }
                         }
                     } else {
                         // guess is a letter
-                        guesses[guessRow][guessColumn] = letter
+                        guesses[currentGuessRow][guessColumn] = letter
+                        
+                        // if last guessed letter was in final position update current row
+                        if guessColumn == 4 {
+                            currentGuessRow += 1
+                        }
+                        
                         stop = true
                         break
                     }
                 }
-            }
             
-            if stop {
-                break
-            }
-        }
+                if stop {
+                    break
+                }
+            } // for-loop
+        } // current guess row check
         
         boardVC.reloadData()
     }
